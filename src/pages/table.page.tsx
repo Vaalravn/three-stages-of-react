@@ -1,8 +1,15 @@
-import React from 'react';
 import './home.page.scss';
+import {InfoTable} from '@components/home';
+import React from 'react';
 
 const TablePage = () => {
-    return <div>Start your table here</div>;
+    return (
+        <div>
+            <div>
+                <InfoTable />
+            </div>
+        </div>
+    );
 };
 
 export default TablePage;

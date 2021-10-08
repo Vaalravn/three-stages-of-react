@@ -1,0 +1,40 @@
+[
+    {
+        "id":1,
+        "name":"Andrzej",
+        "lastname":"Kowalski",
+        "sex":"Mężczyzna"
+    },
+    {
+        "id":2,
+        "name":"Wiktor",
+        "lastname":"Burcon",
+        "sex":"Mężczyzna"
+        
+    },
+    {
+        "id":3,
+        "name":"Michał",
+        "lastname":"Gajdamowicz",
+        "sex":"Mężczyzna"
+    },
+    {
+        "id":4,
+        "name":"Janusz",
+        "lastname":"Małolepszy",
+        "sex":"Mężczyzna"
+    },
+    {
+        "id":5,
+        "name":"Ewelina",
+        "lastname":"Butnicka",
+        "sex":"Kobieta"
+    },
+    {
+        "id":6,
+        "name":"Karolina",
+        "lastname":"Mucha",
+        "sex":"Kobieta"
+    }
+    
+]
