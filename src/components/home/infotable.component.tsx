@@ -1,7 +1,6 @@
-/* eslint-disable prefer-const */
 import {IInfoTable} from '@shared/interfaces';
 import InfoTableService from '@shared/services/infotable.service';
-import {ChangeEventHandler, useEffect, useState} from 'react';
+import {useEffect, useState} from 'react';
 import React from 'react';
 import axios from 'axios';
 
@@ -9,7 +8,6 @@ export const InfoTable = () => {
     const [table, setTable] = useState<IInfoTable[] | null>(null);
     const [edit, setEdit] = useState<Record<number, boolean>>();
     const [edited, setEdited] = useState<Record<number, IInfoTable>>();
-    // const isEdited = table?.map((item) =>);
 
     useEffect(() => {
         InfoTableService.getInfoTable().then((response) => {
@@ -23,7 +21,7 @@ export const InfoTable = () => {
     }, []);
 
     const deleteRow = (id: number) => {
-        let url = `http://localhost:4000/users/${id}`;
+        const url = `http://localhost:4000/users/${id}`;
         axios.delete(url).then(() => {
             const del = (table ?? []).filter((item) => id !== item.id);
             setTable(del);

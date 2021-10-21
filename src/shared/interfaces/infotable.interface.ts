@@ -3,4 +3,5 @@ export interface IInfoTable {
     name: string;
     lastname: string;
     sex: string;
+    [key: string]: string | number;
 }
