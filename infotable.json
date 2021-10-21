@@ -1,0 +1,34 @@
+{
+  "users": [
+    {
+      "name": "123",
+      "lastname": "321",
+      "sex": "221",
+      "id": 1
+    },
+    {
+      "name": "Imię",
+      "lastname": "Nazwisko",
+      "sex": "Płeć",
+      "id": 2
+    },
+    {
+      "name": "Imię",
+      "lastname": "Nazwisko",
+      "sex": "Płeć",
+      "id": 3
+    },
+    {
+      "name": "Imię",
+      "lastname": "Nazwisko",
+      "sex": "Płeć",
+      "id": 4
+    },
+    {
+      "name": "Imię",
+      "lastname": "Nazwisko",
+      "sex": "Płeć",
+      "id": 5
+    }
+  ]
+}

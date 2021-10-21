@@ -1,0 +1,42 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+table td,
+table th {
+    border: 1px solid black;
+    padding: 8px;
+}
+table tr:nth-child(even) {
+    background-color: #f8f5f1;
+}
+table tr:hover {
+    background-color: #f9f1ed;
+}
+table th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: #ed6b29;
+    color: white;
+}
+.tableOptions {
+    padding: 0 !important;
+    width: 0%;
+    border: 0;
+}
+.guzik {
+    width: 3rem;
+    padding: 0.3rem;
+    border-radius: 0;
+    background-color: #ed6b29;
+    border: 0.5px solid black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    &:hover {
+        background-color: #ff732c;
+    }
+}

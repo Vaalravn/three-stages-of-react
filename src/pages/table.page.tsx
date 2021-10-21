@@ -1,4 +1,4 @@
-import './home.page.scss';
+import './table.scss';
 import {InfoTable} from '@components/home';
 import React from 'react';
 
