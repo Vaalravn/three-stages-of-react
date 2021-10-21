@@ -29,7 +29,6 @@ export const InfoTable = () => {
     };
     const rowEdit = (id: number) => {
         setEdited({...edited, [id]: {...(table?.find((item) => item.id === id) as IInfoTable)}});
-        console.log(edit);
         setEdit({...edit, [id]: true});
     };
     const cancel = (id: number) => {
@@ -127,7 +126,6 @@ export const InfoTable = () => {
                     )}
                 </tbody>
             </table>
-            <button onClick={() => console.log(edited)}>dupa</button>
         </div>
     );
 };
