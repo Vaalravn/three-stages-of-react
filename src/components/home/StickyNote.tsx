@@ -7,14 +7,14 @@ interface INoteComponent {
 
 const StickyNote = ({note}: INoteComponent) => {
     return (
-        <ul className="Sticky-Note">
-            <li>
-                <a href="#">
-                    <h2>{note.title}</h2>
+        <li className="Sticky-Note">
+            <a>
+                <h2>{note.title}</h2>
+                <div className="P-Wrap">
                     <p>{note.text}</p>
-                </a>
-            </li>
-        </ul>
+                </div>
+            </a>
+        </li>
     );
 };
 export default StickyNote;

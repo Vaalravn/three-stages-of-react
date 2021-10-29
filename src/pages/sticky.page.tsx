@@ -10,11 +10,11 @@ const StickyPage = () => {
         shallowEqual,
     );
     return (
-        <div className="sticky-main">
+        <ul className="sticky-main">
             {notes.map((note: INote) => (
                 <StickyNote key={note.id} note={note} />
             ))}
-        </div>
+        </ul>
     );
 };
 
