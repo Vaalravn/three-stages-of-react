@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-shadow */
 import {IInfoTable} from '@shared/interfaces';
 import InfoTableService from '@shared/services/infotable.service';
 import {useEffect, useState} from 'react';

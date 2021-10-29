@@ -29,6 +29,12 @@
       "lastname": "Nazwisko",
       "sex": "Płeć",
       "id": 5
+    },
+    {
+      "name": "Imię",
+      "lastname": "Nazwisko",
+      "sex": "Płeć",
+      "id": 6
     }
   ]
 }

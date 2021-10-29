@@ -184,3 +184,153 @@ a {
     border: 1px solid transparent;
     border-radius: 4px;
 }
+
+.Add-note {
+    margin: 2rem auto;
+    padding: 1rem;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.Add-note input {
+    display: block;
+    margin: 1rem auto;
+    width: 20rem;
+    padding: 0.5rem;
+    border: 1px solid #00b8e6;
+    border-radius: 10px;
+    outline: none;
+}
+
+.Add-note button {
+    width: 21rem;
+    padding: 0.7rem;
+    border: 1px solid #00b8e6;
+    background: #00b8e6;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.Add-note button:hover {
+    background: #0093b8;
+}
+
+.Add-note button:disabled {
+    background: #d8d8d8;
+    border: 1px solid #d8d8d8;
+    cursor: not-allowed;
+}
+
+.Note {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.Note:not(:last-child) {
+    border-bottom: 2px solid #f5f6f7;
+}
+
+.Note h1 {
+    color: #222;
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 1.7rem;
+}
+
+.Note p {
+    padding-right: 1rem;
+    color: #444;
+}
+.Note button {
+    padding: 0.5rem 0.7rem;
+    border: 1px solid #d34b4b;
+    background: #d34b4b;
+    color: #fff;
+    border-radius: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.Note button:hover {
+    background: #e06a6a;
+}
+
+main > h1 {
+    text-align: center;
+}
+.sticky-main {
+    margin: 20px auto;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    h2 {
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+        font-weight: normal;
+    }
+}
+.Sticky-Note {
+    list-style: none;
+    li {
+        list-style: none;
+        margin: 2em;
+    }
+    a {
+        text-decoration: none;
+        color: #000;
+        background: #ffc;
+        display: block;
+        height: 12em;
+        width: 12em;
+        padding: 1rem;
+        box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+        transform: rotate(-6deg);
+        transition: transform 0.15s linear;
+    }
+    &:nth-child(even) a {
+        transform: rotate(4deg);
+        position: relative;
+        top: 5px;
+        background: #cfc;
+    }
+    &:nth-child(3n) a {
+        transform: rotate(-3deg);
+        position: relative;
+        top: -5px;
+        background: #ccf;
+    }
+    &:nth-child(5n) a {
+        transform: rotate(5deg);
+        position: relative;
+        top: -10px;
+    }
+    a:hover {
+        box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        transform: scale(1.25);
+        position: relative;
+        z-index: 5;
+    }
+    a:focus {
+        box-shadow: 10px 10px 7px rgba(0, 0, 0, 0.7);
+        transform: scale(1.25);
+        position: relative;
+        z-index: 5;
+    }
+}
