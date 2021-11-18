@@ -9,12 +9,14 @@ const StickyPage = () => {
         (state: IAppState) => state.note.note,
         shallowEqual,
     );
-    return (
+    return notes.length ? (
         <ul className="sticky-main">
             {notes.map((note: INote) => (
                 <StickyNote key={note.id} note={note} />
             ))}
         </ul>
+    ) : (
+        <h1>Dodaj swoją pierwszą notatke!</h1>
     );
 };
 

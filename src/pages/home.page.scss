@@ -335,9 +335,11 @@ main > h1 {
         z-index: 5;
     }
 }
-
 .P-Wrap {
-    overflow: scroll;
-    max-width: 100%;
+    overflow: auto;
     max-height: 85%;
+}
+.atable {
+    display: flex;
+    justify-content: space-between;
 }

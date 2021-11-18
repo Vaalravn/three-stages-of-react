@@ -13,16 +13,22 @@ const WpisyPage = () => {
 
     const dispatch: Dispatch<any> = useDispatch();
 
-    const saveNote = React.useCallback((note: INote) => dispatch(addNote(note)), [dispatch]);
-    const deleteNote = React.useCallback((note: INote) => dispatch(removeNote(note)), [dispatch]);
-
+    const saveNote = (note: INote) => dispatch(addNote(note));
+    const deleteNote = (note: INote) => dispatch(removeNote(note));
     return (
         <main>
             <h1>My Notes</h1>
             <AddNote saveNote={saveNote} note={undefined} />
-            {notes.map((note: INote) => (
-                <Note key={note.id} note={note} removeNote={deleteNote} />
-            ))}
+            <h1>Twoje Notatki</h1>
+            {notes.length ? (
+                notes
+                    .map((note: INote) => (
+                        <Note key={note.id} note={note} removeNote={deleteNote} />
+                    ))
+                    .reverse()
+            ) : (
+                <h3>Dodaj swoją pierwszą notatke!</h3>
+            )}
         </main>
     );
 };

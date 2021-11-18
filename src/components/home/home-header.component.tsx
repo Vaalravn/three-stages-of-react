@@ -8,6 +8,9 @@ const HomeHeader = () => {
         <div className="home-header">
             <div className="project-name">React z rana jak śmietana</div>
             <div className="routing-buttons-container">
+                <button onClick={() => history.push('/task4')} className="routing-button">
+                    Zaadania Algorytmiczne
+                </button>
                 <button onClick={() => history.push('/task1')} className="routing-button">
                     Zadanie 1
                 </button>

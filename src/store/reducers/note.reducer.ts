@@ -1,18 +1,7 @@
 import {INote, NoteAction, NoteState} from '@shared/interfaces';
 import {NoteActions} from '@store/actions/note.action';
 const initialState: NoteState = {
-    note: [
-        {
-            id: 1,
-            title: 'post 1',
-            text: 'Quisque cursus, metus vitae pharetra Nam libero tempore, cum soluta nobis est eligendi',
-        },
-        {
-            id: 2,
-            title: 'post 2',
-            text: 'Harum quidem rerum facilis est et expedita distinctio quas molestias excepturi sint',
-        },
-    ],
+    note: [],
 };
 
 const noteReducer = (state: NoteState = initialState, action: NoteAction): NoteState => {
@@ -25,7 +14,7 @@ const noteReducer = (state: NoteState = initialState, action: NoteAction): NoteS
             };
             return {
                 ...state,
-                note: state.note.concat(newNote),
+                note: [...state.note, newNote],
             };
         case NoteActions.DELETE_NOTE:
             const updatedNotes: INote[] = state.note.filter((note) => note.id !== action.note.id);

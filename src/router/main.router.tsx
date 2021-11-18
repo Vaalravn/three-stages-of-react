@@ -2,8 +2,7 @@ import {HomeWrapper} from '@components/home';
 import PortfolioPage from '@pages/portfolio.page';
 import RoutingTaskPage from '@pages/routing-task.page';
 import TablePage from '@pages/table.page';
-import WpisyPage from '@pages/wpisy.page';
-import StickyPage from '@pages/sticky.page';
+import AlgorytmyPage from '@pages/zadania-algorytmiczne';
 import React from 'react';
 import {Switch, Route, Redirect} from 'react-router-dom';
 
@@ -22,6 +21,9 @@ const MainRouter = () => {
                 </Route>
                 <Route path="/task3">
                     <RoutingTaskPage />
+                </Route>
+                <Route path="/task4">
+                    <AlgorytmyPage />
                 </Route>
             </Switch>
         </HomeWrapper>

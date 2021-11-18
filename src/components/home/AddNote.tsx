@@ -7,7 +7,11 @@ interface INoteSave {
     saveNote: (note: INote | any) => void;
 }
 const AddNote = ({saveNote}: INoteSave) => {
-    const [note, setNote] = React.useState<INote | {}>();
+    const [note, setNote] = React.useState<INote>({
+        title: '',
+        text: '',
+        id: 0,
+    });
 
     const handleNoteData = (e: React.FormEvent<HTMLInputElement>) => {
         setNote({
@@ -19,13 +23,26 @@ const AddNote = ({saveNote}: INoteSave) => {
     const addNewNote = (e: React.FormEvent) => {
         e.preventDefault();
         saveNote(note);
+        setNote({id: 0, title: '', text: ''});
     };
 
     return (
         <form onSubmit={addNewNote} className="Add-note">
-            <input type="text" id="title" placeholder="Tytuł" onChange={handleNoteData} />
-            <input type="text" id="text" placeholder="Tekst" onChange={handleNoteData} />
-            <button disabled={note === undefined ? true : false}>Dodaj notatke</button>
+            <input
+                value={note?.title}
+                type="text"
+                id="title"
+                placeholder="Tytuł"
+                onChange={handleNoteData}
+            />
+            <input
+                value={note?.text}
+                type="text"
+                id="text"
+                placeholder="Tekst"
+                onChange={handleNoteData}
+            />
+            <button disabled={!note.title}>Dodaj notatke</button>
         </form>
     );
 };
